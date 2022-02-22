@@ -473,8 +473,52 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             <div class="strikethrough">
               $2.99
             </div>
-          </div><a href="#" target="_blank" class=
-          "button w-button">Order Now</a>
+          </div> <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'horizontal',
+          label: 'buynow',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"1000 Premium Spotify Plays & Monthly Listeners","amount":{"currency_code":"USD","value":2.25}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
@@ -504,8 +548,52 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             <div class="strikethrough">
               $10.49
             </div>
-          </div><a href="#" target="_blank" class=
-          "button w-button">Order Now</a>
+          </div> <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'horizontal',
+          label: 'buynow',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"1000 Apple Music Plays","amount":{"currency_code":"USD","value":9.99}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
@@ -528,7 +616,7 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae02-2d0eed3e"
         data-w-id="5ca50a38-c1bd-452a-00d1-5e79b792ae02" style=
         "opacity:0">
-          <h2>Real Instagram Followers</h2>
+          <h2>Instagram Followers</h2>
           <p>Ready to get the exposure you need? Then our Instagram promotion service is for you. Our world-class team has over 10 years of combined marketing experience to help you reach your frisks and increase visibility!</p>
           <div class="price-wrap">
             <div class="price">
@@ -537,8 +625,52 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             <div class="strikethrough">
               $11.99
             </div>
-          </div><a href="http://webflow.com" target="_blank" class=
-          "button w-button">Order Now</a>
+          </div> <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'horizontal',
+          label: 'buynow',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"750 Instagram Followers","amount":{"currency_code":"USD","value":10}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
@@ -619,12 +751,6 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
   </script>
 
 
-<!---
-<a href="http://webflow.com" target="_blank" class=
-          "button w-button">Order Now</a>
--->
-
-
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
@@ -655,8 +781,52 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             <div class="strikethrough">
               $12.99
             </div>
-          </div><a href="http://webflow.com" target="_blank" class=
-          "button w-button">Order Now</a>
+          </div> <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'horizontal',
+          label: 'buynow',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"100 Real YouTube Subscribers","amount":{"currency_code":"USD","value":11.49}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
