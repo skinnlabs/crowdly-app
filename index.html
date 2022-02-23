@@ -707,7 +707,7 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
             // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
+            const element = document.getElementById('paypal-button-container-2');
             element.innerHTML = '';
             element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
@@ -719,7 +719,7 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
         onError: function(err) {
           console.log(err);
         }
-      }).render('#paypal-button-container');
+      }).render('#paypal-button-container-2');
     }
     initPayPalButton();
   </script>
