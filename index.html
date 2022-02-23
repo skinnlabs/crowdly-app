@@ -485,52 +485,8 @@ Simply choose the package that's right for you and we'll handle the rest.</p>
             <div class="strikethrough">
               $2.99
             </div>
-          </div> <div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>
- 
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'pill',
-          color: 'black',
-          layout: 'horizontal',
-          label: 'buynow',
-          
-        },
-
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"description":"1000 Premium Spotify Plays & Monthly Listeners","amount":{"currency_code":"USD","value":2.25}}]
-          });
-        },
-
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(orderData) {
-            
-            // Full available details
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-            // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-            element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-            // Or go to another URL:  actions.redirect('thank_you.html');
-            
-          });
-        },
-
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
+          </div> <a href="/spotify" target="_blank" class=
+          "button w-button">Buy Now</a>
         </div>
         <div id=
         "w-node-_5ca50a38-c1bd-452a-00d1-5e79b792ae0e-2d0eed3e"
