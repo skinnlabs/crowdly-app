@@ -70,8 +70,22 @@ visibility: hidden!important;
    document.body.appendChild(el);
 </script>
 
+
+          
+
+
 </head>
 <body>
+
+<script custom-element="storyly-web" src="https://web-story.storyly.io/v2/storyly-web.js"></script>
+              <storyly-web></storyly-web>
+              <script>
+                  const storylyWeb = document.querySelector('storyly-web');
+                  storylyWeb.init({
+                    token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NfaWQiOjczNjgsImFwcF9pZCI6MTIwNzIsImluc19pZCI6MTI5OTJ9.TVXJqRul_Z3ZEQhukuQWLbGGcagmj5ib5rLsH_IBwfc",
+                  });
+              </script>
+
   <div data-animation="default" data-collapse="medium"
   data-duration="500" data-easing="ease" data-easing2="ease" role=
   "banner" class="navbar w-nav">
