@@ -1,30 +1,30 @@
 {
   "background_color": "#000000",
-  "description": "The best online forum and exclusive money-making club on the internet.",
+  "description": "A trusted online community featuring the most sought after products & offers on the internet.",
   "dir": "ltr",
   "display": "standalone",
   "name": "Crowdly",
   "orientation": "any",
   "scope": "/",
   "short_name": "Crowdly",
-  "start_url": "/login",
+  "start_url": "/",
   "theme_color": "#000000",
-  "categories": [],
+  "categories": ["shopping"],
   "screenshots": [],
   "icons": [
     {
-      "src": "https://crowdly.club/app.png",
+      "src": "https://crowdly.club/crowdly-icon.png",
       "type": "image/png",
       "sizes": "32x32"
     },
     {
-      "src": "https://crowdly.club/app.png",
+      "src": "https://crowdly.club/crowdly-icon.png",
       "type": "image/png",
       "sizes": "256x256"
     },
 
 {
-      "src": "https://crowdly.club/app.png",
+      "src": "https://crowdly.club/crowdly-icon.png",
       "type": "image/png",
       "sizes": "512x512"
     } 
